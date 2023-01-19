@@ -14,8 +14,6 @@ const connect = function () {
     conn.write("Name: ABG");
   });
 
-  
-
   // ends program after idling
   conn.setTimeout(7000);
   conn.on('timeout', () => {
