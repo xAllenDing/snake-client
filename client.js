@@ -7,7 +7,17 @@ const connect = function () {
     port: "50541"// PORT number here,
   });
 
-  conn.setTimeout(5000);
+  //message after connecting
+  //set up name after
+  conn.on('connect', () => {
+    console.log("connection successful!");
+    conn.write("Name: ABG");
+  });
+
+  
+
+  // ends program after idling
+  conn.setTimeout(7000);
   conn.on('timeout', () => {
     console.log("You ded cuz u idled");
     conn.end();
