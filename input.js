@@ -27,6 +27,12 @@ const setupInput = (conn) => {
       // console.log("you have entered d");
       connection.write("Move: right");
     }
+    if (data === 'q') {
+      connection.write("Say: ARR");
+    }
+    if (data === 'e') {
+      connection.write("Say: I GON GETCHA");
+    }
   }
 
   stdin.on('data', handleUserInput);
